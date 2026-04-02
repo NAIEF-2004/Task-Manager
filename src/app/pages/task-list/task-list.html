@@ -1,0 +1,18 @@
+<div class="filters">
+  <button [class.active]="filter() === 'all'" (click)="setFilter('all')">All</button>
+  <button [class.active]="filter() === 'active'" (click)="setFilter('active')">Active</button>
+  <button [class.active]="filter() === 'completed'" (click)="setFilter('completed')">
+    Completed
+  </button>
+</div>
+
+
+@for (task of filteredTasks(); track task.id) {
+   <div class="task-item">
+    <div class="task-content">
+      <a class="anchor-link" [routerLink]="['/task', task.id]">{{ task.title }}</a>
+      <p>{{ task.description }}</p>
+      <small>تاريخ الإنشاء: {{ task.createdAt.toLocaleDateString() }}</small>
+    </div>
+  </div>
+}

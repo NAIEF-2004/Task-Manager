@@ -1,0 +1,192 @@
+/* الحاوية الرئيسية */
+.task-detail-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px); /* تأثير زجاجي خفيف */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--text-main);
+  animation: slideUp 0.5s ease-out;
+}
+
+/* الهيدر */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0;
+  background: linear-gradient(to right, #1e293b, #475569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* الـ Badges الاحترافية */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #fef3c7; /* Active/Pending */
+  color: #92400e;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.status-badge.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* تفاصيل المهمة */
+.task-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  background: rgba(248, 250, 252, 0.5);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+}
+
+.detail-row:first-child {
+  grid-column: 1 / -1; /* الوصف يأخذ العرض كاملاً */
+}
+
+.detail-row strong {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.detail-row p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* الأزرار */
+.actions {
+  margin-top: 2.5rem;
+  border-top: 1px solid #034280;
+  padding-top: 1.5rem;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: rgb(16, 140, 149);
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.4);
+}
+
+.back-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.5);
+}
+
+/* حالة عدم الوجود */
+.not-found {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.not-found h2 {
+  font-size: 1.5rem;
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+/* أنيميشن بسيط */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Professional refresh (override) */
+.task-detail-container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  font-family: inherit;
+  color: var(--text);
+}
+
+.header {
+  gap: 14px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  background: none;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+
+.status-badge {
+  border: 1px solid rgba(251, 191, 36, 0.22);
+  background: rgba(251, 191, 36, 0.12);
+  color: #fcd34d;
+}
+
+.status-badge.completed {
+  border: 1px solid rgba(52, 211, 153, 0.22);
+  background: rgba(52, 211, 153, 0.12);
+  color: #6ee7b7;
+}
+
+.task-details {
+  background: rgba(2, 6, 23, 0.35);
+  border: 1px solid var(--border);
+}
+
+.detail-row p {
+  color: #fff;
+}
+
+.actions {
+  border-top: 1px solid var(--border);
+}
+
+.back-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-600));
+  color: #fff;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}

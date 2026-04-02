@@ -1,0 +1,190 @@
+/* خلفية الصفحة */
+/* الحاوية الرئيسية */
+.form {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* العنوان */
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* كل حقل */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* الليبل */
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* الحقول */
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* عند التركيز */
+input:focus,
+textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+/* الأخطاء */
+.error small {
+  color: #e74c3c;
+  font-size: 12px;
+}
+
+/* لما يكون في خطأ */
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: #e74c3c;
+}
+
+/* الأزرار */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* زر الإرسال */
+button[type="submit"] {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(135deg, #4CAF50, #43a047);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover */
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* disabled */
+button[type="submit"]:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* زر الإلغاء */
+button.secondary {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #e0e0e0;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover للإلغاء */
+button.secondary:hover {
+  background: #d6d6d6;
+}
+
+/* Professional refresh (override) */
+.form {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.form h2 {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+input,
+textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(2, 6, 23, 0.35);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(139, 92, 246, 0.55);
+  box-shadow: 0 0 0 4px var(--ring);
+  background: rgba(15, 23, 42, 0.80);
+}
+
+.error small {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.button-group {
+  gap: 12px;
+  margin-top: 18px;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--primary), var(--primary-600));
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+button.secondary {
+  background: rgba(2, 6, 23, 0.35);
+  border: 1px solid var(--border);
+  color: #fff;
+}
+
+button.secondary:hover {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(139, 92, 246, 0.22);
+}
+
+@media (max-width: 640px) {
+  .form {
+    padding: 20px;
+  }
+}
